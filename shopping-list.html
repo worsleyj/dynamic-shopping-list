@@ -23,7 +23,7 @@
     <div>
       <label for="item">Enter a new item:</label>
       <input type="text" name="item" id="item">
-      <button onclick="myFunction()">Add item</button>
+      <button>Add item</button>
     </div>
 
     <ul>
@@ -31,7 +31,7 @@
     </ul>
 
     <script>
-      function myFunction(){
+      function addItem(){
         const value = input.value;
         input.value = "";
         
@@ -55,6 +55,9 @@
       const input = document.querySelector("input");
       const button = document.querySelector("button");
 
+      button.addEventListener("click", () => {
+        addItem();
+      })
 
     </script>
   </body>
