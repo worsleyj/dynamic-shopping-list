@@ -44,11 +44,12 @@
 
         item.appendChild(del);
         del.textContent = "Delete";
-        del.addEventListener("click", () => {
+        del.addEventListener("click", () => { // upon clicking delete button, deletes item
           list.removeChild(item);
+          input.focus()
         })
-
         list.appendChild(item);
+        input.focus()
       }
       const list = document.querySelector("ul");
       const input = document.querySelector("input");
